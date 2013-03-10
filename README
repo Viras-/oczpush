@@ -19,7 +19,7 @@ Why ?:
 OLD README:
 
 Based on
-- z-push 2.0.6 stable's svn version
+- z-push 2.0.7 stable's svn version
    http://svn.berlios.de/svnroot/repos/z-push/release/2.0
 - Owncloud's (should work on stable 4.5.x)
    http://owncloud.org/
@@ -63,9 +63,11 @@ Alias /Microsoft-Server-ActiveSync /var/www/oczpush/index.php
 mkdir -p /var/log/oczpush/ /var/lib/oczpush/ /var/www/oczpush/
 chown www-data:www-data /var/log/oczpush/ /var/lib/oczpush/ 
 
-- edit /var/www/oczpush/config.php
+- edit /var/www/oczpush/config.php.inc
 NB: if you installed from debian package, this is probably '/usr/share/owncloud', otherwise, you know better than me :)
 define('OC_DIR', '/var/www/owncloud');
+
+- rename /var/www/oczpush/config.php.inc to /var/www/oczpush/config.php
 
 - optional, if you know what you do, Upgrade z-push codebase :
 z-push's .svn is integrated, svn up should work, but will probably prevent any git pull to work anymore
