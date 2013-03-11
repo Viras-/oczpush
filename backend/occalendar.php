@@ -57,6 +57,7 @@ class BackendOCCalendar extends BackendDiff {
 			$calendars = OC_Calendar_Calendar::allCalendars($username);
 			foreach ($calendars as $calendar) {
 				$this->calendarIds[] = $calendar['id'];
+				ZLog::Write(LOGLEVEL_DEBUG, 'OCCalendar::Logon : Calendar selected :'.$calendar['displayname']);
 			}
 
 			$this->userTZ = \OCP\Config::getUserValue(\OCP\USER::getUser(), 'calendar', 'timezone', date_default_timezone_get());
