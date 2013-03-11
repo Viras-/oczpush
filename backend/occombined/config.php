@@ -110,7 +110,7 @@ class BackendOCCombinedConfig {
                     'name' => 'BackendOCCalendar',
                     'config' => self::$BackendOCCalendar_config,
                 ),
-		'd' => array(
+				'd' => array(
                     'name' => 'BackendDummy',
                     'config' => self::$BackendDummy_config,
                 ),

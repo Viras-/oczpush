@@ -32,7 +32,7 @@ class BackendOCCombined extends Backend {
         foreach ($this->config['backends'] as $i => $b){
             // load and instatiate backend
             ZPush::IncludeBackend($b['name']);
-	    ZLog::Write(LOGLEVEL_INFO,"$i => $b");
+			ZLog::Write(LOGLEVEL_INFO, $i.' => '.$b['name']);
             $this->backends[$i] = new $b['name']($b['config']);
         }
         ZLog::Write(LOGLEVEL_INFO, sprintf("OCCombined %d backends loaded.", count($this->backends)));
