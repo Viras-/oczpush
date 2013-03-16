@@ -69,7 +69,7 @@ define('OC_DIR', '/var/www/owncloud');
 
 - rename /var/www/oczpush/config.php.inc to /var/www/oczpush/config.php
 
-- for Owncloud 5 replace /var/www/oczpush/backends/occontacts.php with /var/www/oczpush/backends/occontacts5.php
+- for Owncloud 4 replace /var/www/oczpush/backends/occontacts.php with /var/www/oczpush/backends/occontacts4.php
 
 - optional, if you know what you do, Upgrade z-push codebase :
 z-push's .svn is integrated, svn up should work, but will probably prevent any git pull to work anymore
