@@ -46,9 +46,9 @@ if (!isset($email) || !isset($schema)) {
 
 ZLog::Write(LOGLEVEL_DEBUG, 'AutoDiscover :: Request: '.$data);
 ZLog::Write(LOGLEVEL_INFO, 'AutoDiscover :: Request by email: '.$email[0]);
-ZLog::Write(LOGLEVEL_DEBUG, 'AutoDiscover :: Acceptable Response Schema: '.$schema[0]);
+ZLog::Write(LOGLEVEL_DEBUG, 'AutoDiscover :: Acceptable Response Schema: '.$schema[1]);
 
-switch($schema[0]) {
+switch($schema[1]) {
 	case 'http://schemas.microsoft.com/exchange/autodiscover/mobilesync/responseschema/2006': 
 ?>
 <Autodiscover xmlns:autodiscover="http://schemas.microsoft.com/exchange/autodiscover/mobilesync/responseschema/2006">
@@ -84,7 +84,7 @@ switch($schema[0]) {
 	</autodiscover:Response>
 <Autodiscover>
 <?php
-	ZLog::Write(LOGLEVEL_WARN, 'AutoDiscover :: Unsupported Schema: '.$schema[0]);
+	ZLog::Write(LOGLEVEL_WARN, 'AutoDiscover :: Unsupported Schema: '.$schema[1]);
 	break;
 }
 ZLog::Write(LOGLEVEL_DEBUG, 'AutoDiscover :: Response: '.ob_get_contents());
