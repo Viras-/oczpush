@@ -52,6 +52,7 @@ Quick Install, debian/ubuntu style (thks to AlainB) :
 - php parameters (I prefer put it in apache conf) + Apache conf
 
 Alias /Microsoft-Server-ActiveSync /var/www/oczpush/index.php
+Alias /autodiscover/autodiscover.xml /var/www/oczpush/autodiscover.php
  <Directory "/var/www/oczpush/">
     php_flag magic_quotes_gpc off
     php_flag register_globals off
