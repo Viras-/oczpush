@@ -86,7 +86,7 @@ class BackendIMAP extends BackendDiff {
 
         /* BEGIN fmbiete's contribution r1527, ZP-319 */
         $this->excludedFolders = array();
-        if (defined('IMAP_EXCLUDED_FOLDERS')) {
+        if (defined('IMAP_EXCLUDED_FOLDERS') && !empty('IMAP_EXCLUDED_FOLDERS')) {
             $this->excludedFolders = explode("|", IMAP_EXCLUDED_FOLDERS);
             ZLog::Write(LOGLEVEL_DEBUG, sprintf("BackendIMAP->Logon(): Excluding Folders (%s)", IMAP_EXCLUDED_FOLDERS));
         }
